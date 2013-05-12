@@ -48,7 +48,7 @@
 
 		$.ajax({
 			'url': message.action,
-			'data': parameterMap,// $.extend({}, parameterMap, {"term": "thai terminal"}),
+			'data': parameterMap,
 			'cache': true,
 			'datatype': "jsonp",
 			success: function(data, textStats, XMLHttpRequest) {
@@ -61,14 +61,13 @@
 		var bestMatch = results.businesses[0];
 		if (bestMatch !== undefined) {
 			var imageUrl = bestMatch.rating_img_url;
-			console.log(imageUrl);
 			var link = bestMatch.url;
 			var ratingsHtml = "<br/>";
 			ratingsHtml += "<a style='' target='_blank' href='" + link + "'>";
 			ratingsHtml += "<img src='"+ imageUrl + "'";
 			ratingsHtml += "</img>";
 			ratingsHtml += "</a>"
-		}
+		}z
 		
 		var ratingCell = $elem.closest("tr").find(".rating-count").closest("td");
 

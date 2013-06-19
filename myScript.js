@@ -2,6 +2,7 @@
 	var restaurants = $("#RestaurantResults").find("a[rel^='VendorName']");
 
 	if (restaurants.length === 0) {
+		alert("API could not select the restaurants");
 		return;
 	}	
 
@@ -67,7 +68,7 @@
 			ratingsHtml += "<img src='"+ imageUrl + "'";
 			ratingsHtml += "</img>";
 			ratingsHtml += "</a>"
-		}z
+		}
 		
 		var ratingCell = $elem.closest("tr").find(".rating-count").closest("td");
 

@@ -3,17 +3,15 @@
 	"name": "Yelp for Seamless",
 	"description": "This extension allows you to insert yelp reviews on Seamless.com",
 	"version": "1.0",
-
 	"permissions": [
-		"http://api.yelp.com/v2/search"
+		"http://api.yelp.com/v2/search",
+		"http://localhost:5000/search",
+		"http://yelpapi.herokuapp.com/search"
 	],
-	
-
 	"content_scripts" : [{
-		"matches": ["*://www.seamless.com/food*"], //["*://seamless.com/*"],
-		"js": ["jQuery-2.0.0.min.js", "oAuth.js", "sha1.js", "myScript.js"]
+		"matches": ["*://www.seamless.com/food*", "*://www.seamless.com/MealsVendorSelection*"],
+		"js": ["jQuery-2.0.0.min.js", "oAuth.js", "sha1.js", "main.js"]
 	}],
-
 	"browser_action": {
 		"default_icon": "icon.png",
 		"default_popup": "popup.html"
